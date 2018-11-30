@@ -3,19 +3,19 @@ let lines = $("subtitles").children() ;
 const video = document.getElementById("video1");
 
 	// Update the progress bar as the video plays
-	video.ontimeupdate =() => {
+	video.addEventListener ("timeupdate",function(){
 		// highlight text as video plays
 		for (let i = 0;i < lines.length; i++) {
-      let Current = video.getCurrentTime();
+      let current = video.getCurrentTime();
       let start =lines[i].getAttribute("data-start");
       let end= lines[i].getAttribute("data-end");
-		  if (current > start & current < end){
+		  if (current > start && current < end){
 		    lines[i].style.backgroundcolor = "#e5a01e";
 		  } else {
 		    lines[i].style.backgroundcolor = "";
       }
 		}
-    }
+  })
   });
 
 
