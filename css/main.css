@@ -1,3 +1,12 @@
 .current {
   background-color: yellow;
 }
+#video1{
+  width:100%;
+  height: 25%;
+}
+#subtitles{
+  font-size: 1.5em;
+  margin: 0 auto;
+  width:80%;
+}

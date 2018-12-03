@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded",function(){
-let lines = $("subtitles").children() ;
+let lines = document.querySelectorAll('#subtitles span');
 const video = document.getElementById("video1");
 
 	// Update the progress bar as the video plays
@@ -10,9 +10,9 @@ const video = document.getElementById("video1");
       let start =lines[i].getAttribute("data-start");
       let end= lines[i].getAttribute("data-end");
 		  if (current > start && current < end){
-		    lines[i].style.backgroundcolor = "#e5a01e";
+		    lines[i].style.color = "#e5a01e";
 		  } else {
-		    lines[i].style.backgroundcolor = "";
+		    lines[i].style.color = "";
       }
 		}
   })
